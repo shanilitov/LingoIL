@@ -1,0 +1,88 @@
+{
+  "lessonId": "food_basics_01",
+  "skillKey": "food_basics",
+  "version": 3,
+  "titleHe": "אוכל בסיסי",
+  "estimatedMinutes": 6,
+  "learningObjectives": [
+    "I want + food",
+    "Simple requests",
+    "Listening for short phrases"
+  ],
+  "exercises": [
+    {
+      "id": "ex1_translate",
+      "type": "translate_he_to_en",
+      "promptHe": "תרגם לאנגלית:",
+      "sourceTextHe": "אני רוצה תפוח",
+      "acceptedAnswers": [
+        "I want an apple",
+        "I want apple"
+      ],
+      "hints": [
+        "I = אני",
+        "want = רוצה",
+        "apple = תפוח"
+      ],
+      "xp": 10,
+      "heartsPenalty": 1,
+      "targets": [
+        "vocab:apple",
+        "pattern:i_want"
+      ]
+    },
+    {
+      "id": "ex2_listen",
+      "type": "listen_to_text",
+      "promptHe": "הקשב וכתוב מה שמעת:",
+      "audioUrl": "https://cdn.example.com/audio/food/i_want_bread.mp3",
+      "transcriptEn": "I want bread",
+      "acceptedAnswers": [
+        "I want bread"
+      ],
+      "sttEnabled": false,
+      "xp": 12,
+      "heartsPenalty": 1,
+      "targets": [
+        "vocab:bread",
+        "listening:a1"
+      ]
+    },
+    {
+      "id": "ex3_build_sentence",
+      "type": "build_sentence",
+      "promptHe": "בנה את המשפט באנגלית:",
+      "sourceTextHe": "אני רוצה מים",
+      "tokens": [
+        "I",
+        "want",
+        "water",
+        "am",
+        "the"
+      ],
+      "correctOrder": [
+        "I",
+        "want",
+        "water"
+      ],
+      "distractors": [
+        "am",
+        "the"
+      ],
+      "xp": 14,
+      "heartsPenalty": 1,
+      "targets": [
+        "vocab:water",
+        "syntax:svo"
+      ]
+    }
+  ],
+  "completionRules": {
+    "minAccuracy": 0.7,
+    "minExercisesCompleted": 3
+  },
+  "rewards": {
+    "xpTotal": 36,
+    "unlockSkillKey": "food_basics_02"
+  }
+}
