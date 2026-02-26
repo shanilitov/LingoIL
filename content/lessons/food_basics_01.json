@@ -1,7 +1,7 @@
 {
   "lessonId": "food_basics_01",
   "skillKey": "food_basics",
-  "version": 3,
+  "version": 4,
   "titleHe": "אוכל בסיסי",
   "estimatedMinutes": 6,
   "learningObjectives": [
@@ -75,14 +75,62 @@
         "vocab:water",
         "syntax:svo"
       ]
+    },
+    {
+      "id": "ex4_complete_chat",
+      "type": "complete_chat",
+      "promptHe": "השלם את השיחה:",
+      "sourceTextHe": "¡Hola!",
+      "chatPrompt": "Meaning: Hello!",
+      "chatReply": "_____",
+      "options": [
+        "¿Por favor?",
+        "Hola, ¿un café?"
+      ],
+      "correctOption": "Hola, ¿un café?",
+      "xp": 12,
+      "heartsPenalty": 1,
+      "targets": [
+        "conversation:greeting",
+        "vocab:coffee"
+      ]
+    },
+    {
+      "id": "ex5_match_pairs",
+      "type": "match_pairs",
+      "promptHe": "התאם זוגות מתאימים:",
+      "leftItems": [
+        "tea",
+        "coffee",
+        "hello",
+        "a"
+      ],
+      "rightItems": [
+        "té",
+        "café",
+        "hola",
+        "un"
+      ],
+      "pairs": {
+        "tea": "té",
+        "coffee": "café",
+        "hello": "hola",
+        "a": "un"
+      },
+      "xp": 15,
+      "heartsPenalty": 1,
+      "targets": [
+        "matching:a1",
+        "vocab:drinks"
+      ]
     }
   ],
   "completionRules": {
     "minAccuracy": 0.7,
-    "minExercisesCompleted": 3
+    "minExercisesCompleted": 5
   },
   "rewards": {
-    "xpTotal": 36,
+    "xpTotal": 63,
     "unlockSkillKey": "food_basics_02"
   }
 }

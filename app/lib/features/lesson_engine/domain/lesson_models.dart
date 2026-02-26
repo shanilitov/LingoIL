@@ -2,6 +2,8 @@ enum ExerciseType {
   translateHeToEn,
   listenToText,
   buildSentence,
+  completeChat,
+  matchPairs,
 }
 
 ExerciseType exerciseTypeFromString(String value) {
@@ -12,6 +14,10 @@ ExerciseType exerciseTypeFromString(String value) {
       return ExerciseType.listenToText;
     case 'build_sentence':
       return ExerciseType.buildSentence;
+    case 'complete_chat':
+      return ExerciseType.completeChat;
+    case 'match_pairs':
+      return ExerciseType.matchPairs;
     default:
       throw FormatException('Unknown exercise type: $value');
   }
@@ -70,6 +76,13 @@ class Exercise {
     this.tokens = const [],
     this.correctOrder = const [],
     this.distractors = const [],
+    this.options = const [],
+    this.correctOption,
+    this.leftItems = const [],
+    this.rightItems = const [],
+    this.pairs = const {},
+    this.chatPrompt,
+    this.chatReply,
   });
 
   final String id;
@@ -90,4 +103,14 @@ class Exercise {
   final List<String> tokens;
   final List<String> correctOrder;
   final List<String> distractors;
+
+  final List<String> options;
+  final String? correctOption;
+
+  final List<String> leftItems;
+  final List<String> rightItems;
+  final Map<String, String> pairs;
+
+  final String? chatPrompt;
+  final String? chatReply;
 }

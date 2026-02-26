@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'features/lesson_engine/presentation/lesson_player_page.dart';
+import 'core/theme/app_theme.dart';
+import 'features/dashboard/presentation/dashboard_page.dart';
 
 void main() {
   runApp(const LingoIlApp());
@@ -11,9 +12,10 @@ class LingoIlApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LessonPlayerPage(),
+      theme: AppTheme.light(),
+      home: const DashboardPage(),
     );
   }
 }

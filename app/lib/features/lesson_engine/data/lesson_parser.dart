@@ -44,6 +44,13 @@ class LessonParser {
             tokens: _stringList(item['tokens']),
             correctOrder: _stringList(item['correctOrder']),
             distractors: _stringList(item['distractors']),
+            options: _stringList(item['options']),
+            correctOption: item['correctOption'] as String?,
+            leftItems: _stringList(item['leftItems']),
+            rightItems: _stringList(item['rightItems']),
+            pairs: _stringMap(item['pairs']),
+            chatPrompt: item['chatPrompt'] as String?,
+            chatReply: item['chatReply'] as String?,
           ),
         )
         .toList(growable: false);
@@ -52,5 +59,10 @@ class LessonParser {
   List<String> _stringList(dynamic value) {
     if (value is! List) return const [];
     return value.map((entry) => entry.toString()).toList(growable: false);
+  }
+
+  Map<String, String> _stringMap(dynamic value) {
+    if (value is! Map) return const {};
+    return value.map((key, mapValue) => MapEntry(key.toString(), mapValue.toString()));
   }
 }
