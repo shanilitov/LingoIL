@@ -41,7 +41,7 @@ class AppColors {
   static const Color neutral50 = polar;
   static const Color neutral100 = Color(0xFFF1F5F9);
   static const Color neutral200 = swan;
-  static const Color neutral300 = hare;
+  static const Color neutral300 = Color(0xFFCCCCCC);
   static const Color neutral500 = wolf;
   static const Color neutral700 = eel;
   static const Color neutral900 = Color(0xFF3C3C3C);

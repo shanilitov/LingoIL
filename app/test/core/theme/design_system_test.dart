@@ -39,6 +39,7 @@ void main() {
       expect(AppColors.neutral0, AppColors.snow);
       expect(AppColors.neutral50, AppColors.polar);
       expect(AppColors.neutral200, AppColors.swan);
+      expect(AppColors.neutral300, const Color(0xFFCCCCCC));
     });
 
     test('semantic surfaces are defined', () {

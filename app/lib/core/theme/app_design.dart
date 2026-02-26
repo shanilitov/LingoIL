@@ -45,9 +45,9 @@ class AppDesign {
   static const Duration xpCounterDuration = Duration(milliseconds: 400);
 
   // ── Helpers ────────────────────────────────────────────────
-  static BorderRadius borderRadiusSm = BorderRadius.circular(radiusSm);
-  static BorderRadius borderRadiusMd = BorderRadius.circular(radiusMd);
-  static BorderRadius borderRadiusLg = BorderRadius.circular(radiusLg);
-  static BorderRadius borderRadiusXl = BorderRadius.circular(radiusXl);
-  static BorderRadius borderRadiusFull = BorderRadius.circular(radiusFull);
+  static BorderRadius get borderRadiusSm => BorderRadius.circular(radiusSm);
+  static BorderRadius get borderRadiusMd => BorderRadius.circular(radiusMd);
+  static BorderRadius get borderRadiusLg => BorderRadius.circular(radiusLg);
+  static BorderRadius get borderRadiusXl => BorderRadius.circular(radiusXl);
+  static BorderRadius get borderRadiusFull => BorderRadius.circular(radiusFull);
 }
